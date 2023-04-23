@@ -24,7 +24,7 @@ export const authOptions: AuthOptions ={
                 password: { label: 'password', type: 'password' }
             },
             async authorize(credentials){
-                console.warn("cred",credentials)
+                console.info("cred",credentials)
                 if(!credentials?.email || !credentials?.password){
                     throw new Error('Invalid credentials');
                 }
@@ -35,7 +35,7 @@ export const authOptions: AuthOptions ={
                     }
                 });
 
-                if(!user || user?.hashedPassword){
+                if(!user || !user?.hashedPassword){
                     throw new Error('Invalid credentials')
                 }
 
@@ -60,7 +60,7 @@ export const authOptions: AuthOptions ={
     session:{
         strategy:'jwt'
     },
-    secret: process.env.NEXTAUTH_URL    
+    secret: process.env.NEXTAUTH_SECRET    
 };
 
 export default NextAuth(authOptions)
