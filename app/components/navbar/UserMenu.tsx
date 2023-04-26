@@ -19,7 +19,6 @@ function UserMenu({ currentUser }: UserMenuProps) {
   const loginModal = useLoginModal();
 
   const toggle = useCallback(() => {
-    console.log("ssss");
     setIsOpen((value) => !value);
   }, []);
   return (
