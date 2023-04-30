@@ -12,7 +12,7 @@ interface NavbarProps {
 }
 
 function Navbar({currentUser}:NavbarProps) {
-  console.log("user",currentUser)
+ 
   return (
     <div className="fixed w-full bg-white shadow-sm">
       <div className="py-4 border-p-[1px]"> 
