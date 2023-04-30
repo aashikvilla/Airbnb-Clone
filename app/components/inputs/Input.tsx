@@ -7,7 +7,7 @@ interface InputProps {
   label: string;
   type?: string;
   disabled?: boolean;
-  formatPrice?: string;
+  formatPrice?: boolean;
   required?: boolean;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
@@ -20,7 +20,7 @@ function Input({
   formatPrice,
   required,
   register,
-  errors,
+  errors
 }: InputProps) {
   return (
     <div className="w-full relative">
