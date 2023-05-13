@@ -1,7 +1,6 @@
 "use client";
 import useCountries from "@/app/hooks/useCountries";
-import { SafeListing, SafeUser } from "@/app/types";
-import { Reservation } from "@prisma/client";
+import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo } from "react";
 import {format} from 'date-fns'
@@ -11,7 +10,7 @@ import Button from "../Button";
 
 interface ListingCardProps {
   data: SafeListing;
-  reservation?: Reservation;
+  reservation?: SafeReservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
@@ -63,7 +62,7 @@ function ListingCard({
   },[reservation])
       //5:13
   return (
-    <div className="col-span-1 cursor-poiter group"
+    <div className="col-span-1 cursor-pointer group"
     onClick={()=>router.push(`/listings/${data.id}`)}
     
     >

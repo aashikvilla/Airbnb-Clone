@@ -69,9 +69,8 @@ function ListingClient({
         })
         .then(()=>{
             toast.success('Listing reserved!');
-            setDateRange(initialDateRange);
-            //Redirect to trips
-            router.refresh();
+            setDateRange(initialDateRange);          
+            router.push('/trips');
         })
         .catch((error)=>{
             console.error(error);
