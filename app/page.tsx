@@ -8,6 +8,7 @@ import { list } from "postcss";
 import ListingCard from "./components/listings/ListingCard";
 import { getCurrentUser } from "./actions/getCurrentUser";
 const inter = Inter({ subsets: ["latin"] });
+export const dynamic = 'force-dynamic';
 
 interface HomeProps{
   searchParams: IListingsParams
