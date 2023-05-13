@@ -11,7 +11,7 @@ export type CountrySelectValue={
 }
 
 interface CountrySelectProps{
-    value?:CountrySelectProps,
+    value?:CountrySelectValue,
     onChange:(value:CountrySelectValue)=>void
 }
 
