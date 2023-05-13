@@ -33,7 +33,7 @@ const onCancel = useCallback(
     .finally(()=>{
         setDeleteingId('');
     })
-  }, [router],)
+  }, [router])
 
 
 
